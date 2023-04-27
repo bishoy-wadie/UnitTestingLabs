@@ -1,0 +1,38 @@
+<table class="table table-bordered border-primary text-center">
+  <thead>
+    <tr>
+      <th scope="col" rowspan="2">ID</th>
+      <th scope="col" rowspan="2">Name</th>
+      <th scope="col" rowspan="2">Age</th>
+      <th scope="col" colspan="2">Address</th>
+      <th scope="col" rowspan="2">Update</th>
+      <th scope="col" rowspan="2">Delete</th>
+    </tr>
+    <tr>
+      <th scope="col">City</th>
+      <th scope="col">Building No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>
+        <a routerLink="/users/{{ u.id }}">{{ u.id }}</a>
+      </td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.age }}</td>
+      <td>{{ u.address.city }}</td>
+      <td>{{ u.address.buildno }}</td>
+      <td>
+        <a
+          type="button"
+          routerLink="/users/{{ u.id }}/update"
+          class="btn btn-outline-success"
+          >Update</a
+        >
+      </td>
+      <td>
+        <a type="button" href="" class="btn btn-outline-danger">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
