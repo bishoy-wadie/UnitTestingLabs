@@ -1,0 +1,14 @@
+{
+  "name": "jasmine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jasmineLab.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^4.6.0"
+  }
+}
